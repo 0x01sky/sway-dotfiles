@@ -26,5 +26,7 @@
     # and then copy what you like to ~/.config
 ```
 
+**Best Wishes!**
+
 
 
