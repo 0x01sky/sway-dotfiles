@@ -17,7 +17,8 @@
 
 ## Preview
 
-![Asset](assets/asset1.png)
+![Asset](assets/asset2.png)
+![Asset2](assets/asset1.png)
 
 ## Setup
 
