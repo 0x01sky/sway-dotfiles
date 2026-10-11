@@ -1,0 +1,96 @@
+/* Nord SwayNC Theme */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    border-radius: 0;
+}
+
+.control-center {
+    background: #2e3440;
+    color: #d8dee9;
+    border: 1px solid #4c566a;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.notification-row {
+    outline: none;
+}
+
+.notification {
+    background: #3b4252;
+    color: #d8dee9;
+    border: 1px solid #4c566a;
+    margin: 5px;
+    padding: 8px;
+}
+
+.notification-content {
+    background: transparent;
+}
+
+.notification-default-action,
+.notification-action {
+    background: #3b4252;
+    color: #d8dee9;
+    border: none;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    background: #434c5e;
+}
+
+.widget-title,
+.widget-dnd,
+.widget-mpris,
+.widget-volume,
+.widget-backlight {
+    background: #2e3440;
+    color: #d8dee9;
+    border: none;
+    padding: 8px;
+}
+
+.widget-title > button {
+    background: #434c5e;
+    color: #d8dee9;
+    border: none;
+}
+
+.widget-dnd > switch {
+    background: #4c566a;
+}
+
+.widget-dnd > switch:checked {
+    background: #88c0d0;
+}
+
+.widget-volume trough,
+.widget-backlight trough {
+    background: #434c5e;
+}
+
+.widget-volume highlight,
+.widget-backlight highlight {
+    background: #88c0d0;
+}
+
+.widget-volume slider,
+.widget-backlight slider {
+    background: #eceff4;
+    border: none;
+    border-radius: 0;
+}
+
+.close-button {
+    background: #bf616a;
+    color: #eceff4;
+    border: none;
+    box-shadow: none;
+}
+
+
+

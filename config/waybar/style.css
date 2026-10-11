@@ -1,0 +1,168 @@
+* {
+    font-family: "UbuntuMono Nerd Font", monospace;
+    font-size: 16px;
+    color: #D8DEE9;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(46, 52, 64, 0.96);
+    color: #D8DEE9;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Floating bar layout */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0;
+    padding: 0;
+}
+
+/* Modern workspace numbers */
+#workspaces {
+    background: transparent;
+    margin: 0;
+    padding: 0 8px;
+}
+
+#workspaces button {
+    color: #7B88A1;
+    background: #353B49;
+    padding: 0 11px;
+    margin: 5px 3px;
+    min-width: 12px;
+    min-height: 20px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: normal;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #ECEFF4;
+    background: #434C5E;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    color: #88C0D0;
+    background: #434C5E;
+    border-bottom: 2px solid #88C0D0;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: #ECEFF4;
+    background: #BF616A;
+    border-bottom: 2px solid #BF616A;
+}
+
+/* Clock */
+#clock {
+    color: #88C0D0;
+    background: #3B4252;
+    padding: 0 10px;
+    margin: 0;
+    font-weight: bold;
+    border-left: 1px solid #434C5E;
+}
+
+/* System modules */
+#tray,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#custom-notification,
+#battery {
+    color: #D8DEE9;
+    background: transparent;
+    padding: 0 8px;
+    margin: 0;
+    border-left: 1px solid #434C5E;
+}
+
+/* Battery states */
+#battery,
+#battery.charging,
+#battery.plugged {
+    color: #A3BE8C;
+}
+
+#battery.warning {
+    color: #EBCB8B;
+}
+
+#battery.critical {
+    color: #BF616A;
+}
+
+/* Tray */
+#tray menu {
+    background-color: #2E3440;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#tray menu menuitem {
+    background-color: transparent;
+    color: #D8DEE9;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+#tray menu menuitem:hover {
+    background-color: #434C5E;
+    color: #ECEFF4;
+}
+
+#tray menu menuitem:disabled {
+    color: #616E88;
+}
+
+/* Notification */
+#custom-notification,
+#custom-notification:hover,
+#custom-notification:active,
+#custom-notification:focus {
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    background-clip: border-box;
+}
+
+#custom-notification {
+    background-color: #3b4252;
+    color: #88c0d0;
+
+}
+
+#custom-notification:hover,
+#custom-notification:active,
+#custom-notification:focus {
+    background-color: #434c5e;
+    color: #eceff4;
+}
+
+/* Tooltips */
+tooltip {
+    background: #3B4252;
+    border: 1px solid #4C566A;
+}
+
+tooltip label {
+    color: #ECEFF4;
+}

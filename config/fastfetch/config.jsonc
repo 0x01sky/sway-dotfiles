@@ -1,0 +1,143 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "file",
+        "source": "$HOME/.config/fastfetch/thinkpad-v.txt",
+        "padding": {
+            "top": 1,
+            "left": 2,
+            "right": 2
+        },
+        "color": {
+            "1": "#81a1c1",
+            "2": "white"
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "key": "{#34}╭───────────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "{#34}├───────────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "{#34}│ {#37} User     {#keys}   {#34}│",
+            "type": "title",
+            "format": "{user-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰇅 Hostname   {#keys} {#34}│",
+            "type": "title",
+            "format": "{host-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} Machine    {#keys} {#34}│",
+            "type": "host",
+            "format": "{family}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󱄛 Distro   {#keys}   {#34}│",
+            "type": "os",
+            "format": "{pretty-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} Kernel   {#keys}   {#34}│",
+            "type": "kernel",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰃭 OS Age     {#keys} {#34}│",
+            "type": "command",
+            "text": "birth_install=$(stat -c %W / | tr -d '-'); if [ \"$birth_install\" -eq 0 ]; then birth_install=$(stat -c %Y /); fi; now=$(date +%s); days=$(( (now - birth_install) / 86400 )); echo \"$days days\"",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰥔 Uptime   {#keys}   {#34}│",
+            "type": "uptime",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}├───────────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "{#34}│ {#37}󰾍 Window Mgr {#keys} {#34}│",
+            "type": "wm",
+            "format": "{pretty-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} Terminal   {#keys} {#34}│",
+            "type": "terminal",
+            "format": "{pretty-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} Shell      {#keys} {#34}│",
+            "type": "shell",
+            "format": "{pretty-name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰛖 Term Font  {#keys} {#34}│",
+            "type": "terminalfont",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} System Font{#keys} {#34}│",
+            "type": "font",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰏔 Packages   {#keys} {#34}│",
+            "type": "packages",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}├───────────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "{#34}│ {#37}󰍹 Display    {#keys} {#34}│",
+            "type": "display",
+            "compactType": "resolution",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰍛 CPU        {#keys} {#34}│",
+            "type": "cpu",
+            "showPeCoreCount": true,
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰢮 GPU        {#keys} {#34}│",
+            "type": "gpu",
+            "format": "{name}",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37} memory     {#keys} {#34}│",
+            "type": "memory",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}│ {#37}󰉉 disk       {#keys} {#34}│",
+            "type": "disk",
+            "folders": "/",
+            "outputColor": "#d8dee9"
+        },
+        {
+            "key": "{#34}╰───────────────╯",
+            "type": "custom"
+        }
+    ]
+}

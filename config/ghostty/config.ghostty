@@ -1,0 +1,13 @@
+font-family = UbuntuMono Nerd Font
+font-size = 18
+background-opacity = 0.9
+gtk-titlebar = false
+resize-overlay = never
+confirm-close-surface = false
+window-padding-x = 4
+window-padding-y = 4
+window-vsync = true
+window-decoration = none
+background-blur = false
+theme = Nord
+keybind = alt+c=write_screen_file:open

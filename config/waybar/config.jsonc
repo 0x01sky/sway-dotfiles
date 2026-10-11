@@ -1,0 +1,82 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin": 8,
+
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock", "custom/notification"],
+  "modules-right": ["tray", "cpu", "memory", "pulseaudio", "network", "battery"],
+
+  "clock": {
+    "format": "{:%H:%M}  ",
+    "format-alt": "{:%a, %d %b %Y} 󰸗 ",
+    "on-click": "toggle",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": "  {percentage}%",
+    "tooltip": true
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " ",
+    "format-disconnected": "󰖪 ",
+    "tooltip": true
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%", 
+    "format-muted": "󰝟 muted", 
+    "format-icons": { "default": ["", " ", " "] }, 
+    "on-click": "pavucontrol", 
+    "tooltip": true 
+  },
+
+  "tray":{
+    "icon-size": 18,
+    "spacing": 8
+  },
+  
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "justify": "center",
+    "align": 0.5,
+    "format-icons": {
+        "notification": " ",
+        "none": " ",
+        "dnd-notification": " ",
+        "dnd-none": " ",
+        "inhibited-notification": " ",
+        "inhibited-none": " ",
+        " dnd-inhibited-notification": " ",
+        "dnd-inhibited-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+
+  "sway/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true
+  }
+}
