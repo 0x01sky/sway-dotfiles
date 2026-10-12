@@ -47,6 +47,7 @@ command -v fzf &>/dev/null && eval "$(fzf --zsh --history-size=1000)"
 
 mkcd() { mkdir "$1" && cd "$1" }
 refresh() { source ~/.zshrc }
+get_ip() { curl --silent https://ipinfo.io/ | jq -r ".ip" }
 
 # Default Editor
 
