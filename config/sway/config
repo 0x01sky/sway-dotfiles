@@ -34,6 +34,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 exec_always ~/.config/waybar/scripts/launch.sh
 exec_always ~/.config/swaync/scripts/refresh.sh
 exec_always ~/.config/sway/scripts/udiskie.sh
+exec_always wlsunset -t 3500 -T 6500 -l 33.5731 -L -7.5898
 
 ### Output configuration
 #

@@ -6,7 +6,7 @@
 
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock", "custom/notification"],
-  "modules-right": ["tray", "cpu", "memory", "pulseaudio", "network", "battery"],
+  "modules-right": ["tray", "custom/night-light", "cpu", "memory", "pulseaudio", "network", "battery"],
 
   "clock": {
     "format": "{:%H:%M}  ",
@@ -72,6 +72,15 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+},
+
+  "custom/night-light": {
+    "exec": "~/.config/waybar/scripts/night-light.sh",
+    "on-click": "~/.config/waybar/scripts/night-light.sh toggle",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 2,
+    "tooltip": true
 },
 
   "sway/workspaces": {

@@ -80,6 +80,7 @@ window#waybar {
 
 /* System modules */
 #tray,
+#custom-night-light,
 #cpu,
 #memory,
 #pulseaudio,
@@ -155,6 +156,18 @@ window#waybar {
 #custom-notification:focus {
     background-color: #434c5e;
     color: #eceff4;
+}
+
+#custom-night-light {
+    padding: 0 10px;
+}
+
+#custom-night-light.enabled {
+    color: #f9c74f;
+}
+
+#custom-night-light.disabled {
+    color: #888888;
 }
 
 /* Tooltips */
