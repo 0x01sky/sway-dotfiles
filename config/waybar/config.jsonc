@@ -5,8 +5,8 @@
   "margin": 8,
 
   "modules-left": ["sway/workspaces"],
-  "modules-center": ["clock", "custom/notification"],
-  "modules-right": ["tray", "custom/night-light", "cpu", "memory", "pulseaudio", "network", "battery"],
+  "modules-center": ["custom/weather", "clock", "custom/notification"],
+  "modules-right": ["tray","custom/night-light", "cpu","memory", "pulseaudio", "network", "battery"],
 
   "clock": {
     "format": "{:%H:%M}  ",
@@ -34,8 +34,13 @@
 
   "battery": {
     "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂅 ",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "tooltip": false
+    "tooltip": false,
+    "states": {
+      "critical": 15,
+      "warning": 30
+    }
   },
 
   "pulseaudio": {
@@ -82,7 +87,11 @@
     "interval": 2,
     "tooltip": true
 },
-
+  "custom/weather": {
+    "exec" : "curl -s 'wttr.in/?format=%t'",
+    "format" : "  {}",
+    "interval" : 300
+},
   "sway/workspaces": {
     "format": "{name}",
     "on-click": "activate",

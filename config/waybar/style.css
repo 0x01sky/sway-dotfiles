@@ -79,7 +79,9 @@ window#waybar {
 }
 
 /* System modules */
+
 #tray,
+#custom-weather,
 #custom-night-light,
 #cpu,
 #memory,
@@ -168,6 +170,12 @@ window#waybar {
 
 #custom-night-light.disabled {
     color: #888888;
+}
+
+#custom-weather {
+    padding: 0 10px;
+    color: #f9c74f;
+    background : #3b4252;
 }
 
 /* Tooltips */
