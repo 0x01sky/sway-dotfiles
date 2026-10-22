@@ -2,11 +2,14 @@
 
 PS1='%n@%m %F{blue}%~%f $ '
 
+# Autocompletions
 
-## Autocompletions
-
-autoload -Uz compinit
+autoload -Uz compinit 
 compinit
+
+## Displaying an ascii art at shell startup
+
+command -v cowsay fortune >/dev/null 2>&1 && cowsay "$(fortune)"
 
 # Displaying the clock in the right prompt
 
@@ -47,7 +50,6 @@ command -v fzf &>/dev/null && eval "$(fzf --zsh --history-size=1000)"
 
 mkcd() { mkdir "$1" && cd "$1" }
 refresh() { source ~/.zshrc }
-get_ip() { curl --silent https://ipinfo.io/ | jq -r ".ip" }
 
 # Default Editor
 
