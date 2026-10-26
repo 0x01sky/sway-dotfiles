@@ -17,6 +17,15 @@ set $right l
 
 set $term ghostty
 
+set $bg       #2E3440
+set $surface  #3B4252
+set $muted    #434C5E
+set $text     #ECEFF4
+set $blue     #81A1C1
+set $cyan     #88C0D0
+set $green    #A3BE8C
+set $red      #BF616A
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -34,13 +43,14 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 exec_always ~/.config/waybar/scripts/launch.sh
 exec_always ~/.config/swaync/scripts/refresh.sh
 exec_always ~/.config/sway/scripts/udiskie.sh
+
 # exec_always wlsunset -t 3500 -T 6500 -l 33.5731 -L -7.5898
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg ~/Pictures/Wallpapers/nord3.jpg fill
+output * bg ~/Pictures/Wallpapers/mountain.jpg fill
 #
 # Example configuration:
 #
@@ -283,5 +293,12 @@ bindsym $mod+r mode "resize"
 default_border pixel 2
 gaps inner 4
 gaps outer 2
+
+client.focused          $blue $surface $text $cyan $blue
+client.focused_inactive $muted $bg $text $muted $muted
+client.unfocused        $bg $bg $text $bg $bg
+client.urgent           $red $red $text $red $red
+client.placeholder      $bg $bg $text $bg $bg
+client.background       $bg
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
