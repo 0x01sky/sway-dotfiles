@@ -7,7 +7,7 @@ if command -v udiskie &>/dev/null; then
      sleep 0.2
    done
 
-   exec udiskie --tray --notify
+   exec udiskie --config ~/.config/udiskie/config.yml
 else
   return
 fi

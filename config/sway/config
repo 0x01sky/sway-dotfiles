@@ -17,6 +17,8 @@ set $right l
 
 set $term ghostty
 
+# Colors
+
 set $bg       #2E3440
 set $surface  #3B4252
 set $muted    #434C5E
