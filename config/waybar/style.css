@@ -1,6 +1,6 @@
 * {
-    font-family: "UbuntuMono Nerd Font", monospace;
-    font-size: 16px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 15px;
     color: #D8DEE9;
     background: transparent;
     border: none;
@@ -161,7 +161,8 @@ window#waybar {
 }
 
 #custom-night-light {
-    padding: 0 10px;
+    padding: 4 8px;
+
 }
 
 #custom-night-light.enabled {
@@ -169,7 +170,8 @@ window#waybar {
 }
 
 #custom-night-light.disabled {
-    color: #888888;
+    color: #00ffff;
+    padding: 0 12px;
 }
 
 #custom-weather {

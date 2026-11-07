@@ -2,7 +2,8 @@ show-failed-attempts
 indicator-radius=100
 indicator-thickness=7
 font=UbuntuMono Nerd Font
-image=/usr/share/backgrounds/5748285.jpg
+image=~/Pictures/Wallpapers/nordy.jpg
+
 
 color=111318
 bs-hl-color=ffb4ab

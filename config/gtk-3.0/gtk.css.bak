@@ -1,0 +1,18 @@
+menu,
+.menu,
+popover,
+popover.background {
+    background-color: #303030;
+    color: #eeeeec;
+    opacity: 1;
+}
+
+menuitem {
+    background-color: #303030;
+    color: #eeeeec;
+}
+
+menuitem:hover {
+    background-color: #454545;
+    color: #ffffff;
+}

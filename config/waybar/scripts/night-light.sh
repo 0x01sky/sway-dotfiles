@@ -18,7 +18,7 @@ if [[ "$1" == "toggle" ]]; then
 fi
 
 if [[ -f "$STATE" ]]; then
-    printf '{"text":" ","tooltip":"Night Light ON","class":"enabled"}\n'
+    printf '{"text":"󰖔","tooltip":"Night Light ON","class":"enabled"}\n'
 else
-    printf '{"text":"󱓤 ","tooltip":"Night Light OFF","class":"disabled"}\n'
+    printf '{"text":"󱓤","tooltip":"Night Light OFF","class":"disabled"}\n'
 fi
