@@ -2,6 +2,10 @@
 
 PS1='%n@%m %F{blue}%~%f $ '
 
+# History Size and History File
+
+export HISTSIZE=1000
+
 # Autocompletions
 
 autoload -Uz compinit 
@@ -9,7 +13,7 @@ compinit
 
 ## Displaying an ascii art at shell startup
 
-command -v cowsay fortune >/dev/null 2>&1 && cowsay "$(fortune)"
+# command -v cowsay fortune >/dev/null 2>&1 && cowsay "$(fortune -n 2)"
 
 # Displaying the clock in the right prompt
 
@@ -17,8 +21,8 @@ command -v cowsay fortune >/dev/null 2>&1 && cowsay "$(fortune)"
 
 # Shell aliases
 
-## nvim
-command -v nvim &>/dev/null && alias nv="nvim"
+## vim
+command -v vim &>/dev/null && alias vi="vim"
 
 ## ls
 command -v lsd &>/dev/null && alias ls="lsd"
@@ -26,10 +30,11 @@ command -v lsd &>/dev/null && alias ls="lsd"
 ## cat
 
 if command -v bat &>/dev/null; then
-  alias cat="bat";
+  alias cat="bat"; # For RHEL/Arch/Gentoo/etc
 elif command -v batcat &>/dev/null; then
-  alias cat="batcat"
+  alias cat="batcat" # For Debian/Ubuntu
 fi
+
 
 ## df
 command -v duf &>/dev/null && alias df="duf"
@@ -41,10 +46,23 @@ command -v fastfetch &>/dev/null && alias ff="fastfetch"
 command -v grep &>/dev/null && alias grep="grep --color=auto"
 
 
+## env
+
+command -v fzf >/dev/null 2>&1 && alias env="env | fzf"
+
+
 # Evaluation for fzf in zsh for CTRL+R
 
-command -v fzf &>/dev/null && eval "$(fzf --zsh --history-size=1000)"
+command -v fzf &>/dev/null && source <(fzf --zsh)
 
+# Evaluation for zoxide
+#
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+
+
+# Adding golang path
+
+command -v go &>/dev/null && export PATH="$HOME/go/bin:$PATH"
 
 # Shell Functions
 
@@ -53,16 +71,15 @@ refresh() { source ~/.zshrc }
 
 # Default Editor
 
-if command -v nvim &>/dev/null; then
-  export VISUAL=nvim
+if command -v vim &>/dev/null; then
+  export VISUAL=vim
   export EDITOR=vim
 fi
 
-
 # PATHS to export
 
-PATH="$HOME/.local/bin:$PATH"
-export PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # ZSH Completions
 
@@ -73,3 +90,7 @@ export PATH
 
 [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  ]] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[[ -d /home/linuxbrew/.linuxbrew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
+# export PATH="$HOME/oslabs/bin:$PATH"
