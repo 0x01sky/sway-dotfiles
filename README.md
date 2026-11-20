@@ -6,7 +6,7 @@
 
 - You will need alot of packages and dependencies to be installed to ensure everything works fine
 
-```swaync (instead of dunst and mako), brightnessctl, udiskie, wlogout (for a better wayland powermenu), flameshot (for screenshots), ghostty (or whatever you like ), fastfetch, swaylock, swayidle, rofi, Nerd fonts, zsh (optional, you can use whatever you shell you like), waybar, gammastep, and wlsunset(for managing night lights), Nerd Fonts (Mandatory)```
+```swaync (instead of dunst and mako), brightnessctl, udiskie, wlogout (for a better wayland powermenu), flameshot (for screenshots), obs (for recording and streaming), ghostty (or whatever you like ), fastfetch, swaylock, swayidle, rofi, Nerd fonts, zsh (optional, you can use whatever you shell you like), waybar, gammastep, and wlsunset(for managing night lights), Nerd Fonts (Mandatory)```
 
 ## Links for Fonts
 
