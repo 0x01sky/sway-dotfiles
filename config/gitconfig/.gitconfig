@@ -1,0 +1,6 @@
+[user]
+	email = sky@git.org
+	name = sky
+[credential]
+	helper = libsecret
+	helper = oauth
