@@ -259,4 +259,7 @@ client.urgent           $red $red $text $red $red
 client.placeholder      $bg $bg $text $bg $bg
 client.background       $bg
 
+include '"$HOME"/.config/sway/config'
+include '"$HOME"/.config/sway/config.d/*.conf'
+
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
